@@ -27,8 +27,8 @@ def talk():# talk and print out what you said
             speak("Sorry, Could you please repeat")
             print("Sorry, Could you please repeat")
         except sr.RequestError:
-            speak("nigga, your network is weak asf")
-            print("nigga, your network is weak asf")
+            speak("your network is weak ")
+            print("your network is weak ")
         return text
 
 key="Private"
