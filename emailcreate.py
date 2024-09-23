@@ -6,8 +6,8 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 def email_read():
 
-    username = "jasondalewson@gmail.com"
-    password = "buvr aeev qujp stfs"
+    username = "xxx@gmail.com"
+    password = "xxx xxx xxx"
     # connect to Gmail's IMAP server
     mail = imaplib.IMAP4_SSL("imap.gmail.com")
     try:
@@ -50,7 +50,7 @@ def email_read():
     # Create a reply message
     reply_msg= MIMEMultipart()
     reply_msg["From"]=username
-    reply_msg["To"]="ienyce003@gmail.com"
+    reply_msg["To"]="ppp@gmail.com"
     reply_msg["Subject"] = "Re: " + subject
 
     # Add the reply body
@@ -60,7 +60,7 @@ def email_read():
     # Connect to the SMTP server and send the email
     smtp_server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
     smtp_server.login(username, password)
-    smtp_server.sendmail(username, "ienyce003@gmail.com", reply_msg.as_string())
+    smtp_server.sendmail(username, "ppp@gmail.com", reply_msg.as_string())
     smtp_server.quit()
 
 email_read()
